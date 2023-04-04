@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/Areia.vox-27e0466f9d51360a28f15b5d4e137968.mesh"
+
+[deps]
+
+source_file="res://Voxel/Areia.vox"
+dest_files=[ "res://.import/Areia.vox-27e0466f9d51360a28f15b5d4e137968.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

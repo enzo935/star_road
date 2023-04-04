@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/Arvore.vox-363d0f6f5d7521e285abe739dcac58ef.mesh"
+
+[deps]
+
+source_file="res://AssetsVox/Arvore.vox"
+dest_files=[ "res://.import/Arvore.vox-363d0f6f5d7521e285abe739dcac58ef.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false

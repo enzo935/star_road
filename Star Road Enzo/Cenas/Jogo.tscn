@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Cenas/Esqueleto.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenario.meshlib" type="MeshLibrary" id=2]
+[ext_resource path="res://Obstaculos.meshlib" type="MeshLibrary" id=3]
+[ext_resource path="res://Scripts/Camera.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Jogo.gd" type="Script" id=5]
+
+[node name="Jogo" type="Spatial"]
+script = ExtResource( 5 )
+
+[node name="Robo" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 3 )
+
+[node name="Cenario" type="GridMap" parent="."]
+mesh_library = ExtResource( 2 )
+cell_size = Vector3( 12, 2, 2 )
+data = {
+"cells": PoolIntArray( 0, 0, 2, 65535, 0, 2, 0, 1, 2, 65535, 1, 2, 0, 2, 2, 65535, 2, 2, 0, 3, 2, 65535, 3, 2, 0, 4, 2, 65535, 4, 2, 0, 5, 2, 65535, 5, 2, 0, 65531, 2, 65535, 65531, 2, 0, 65532, 2, 65535, 65532, 2, 0, 65533, 2, 65535, 65533, 2, 0, 65534, 2, 65535, 65534, 2, 0, 65535, 2, 65535, 65535, 2 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( -1, 0, 0 )
+}
+
+[node name="Obstaculos" type="GridMap" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh_library = ExtResource( 3 )
+cell_size = Vector3( 4, 2, 2 )
+data = {
+"cells": PoolIntArray( 1, 1, 0, 65534, 1, 1, 0, 3, 1, 65534, 3, 2, 65535, 3, 1, 1, 5, 1, 1, 65532, 0, 65534, 65532, 2, 0, 65533, 0, 1, 65534, 2, 65533, 65535, 0 )
+}
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 0, 0 )
+}
+
+[node name="KinematicBody" type="KinematicBody" parent="."]
+script = ExtResource( 4 )
+
+[node name="Camera" type="Camera" parent="KinematicBody"]
+transform = Transform( -0.965926, 0.166366, -0.198267, 0, 0.766044, 0.642788, 0.258819, 0.620885, -0.739942, 0, 8, 0 )
+projection = 1
+size = 10.0
+
+[node name="Label3D" type="Label3D" parent="KinematicBody"]
+transform = Transform( -1, 0, 0, 0, 0.867375, -0.497655, 0, 0.497655, 0.867375, -0.39197, 5.15203, 6.20058 )
+visible = false
+pixel_size = 0.092
+modulate = Color( 1, 0, 0, 1 )
+outline_modulate = Color( 0.101961, 0, 0, 1 )
+text = "press:r para resetar
+press:M para menu"
+__meta__ = {
+"_editor_description_": "prss:r para resetar"
+}
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.824298, -0.279864, 0.492147, -0.175375, 0.952741, 0.248049, -0.538309, 0.118156, -0.834424, 0, 9.47683, 0 )
+light_color = Color( 0.972549, 0.113725, 0, 1 )
+light_energy = 0.6
+shadow_enabled = true

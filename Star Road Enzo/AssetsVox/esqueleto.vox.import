@@ -1,0 +1,16 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions"
+type="Mesh"
+path="res://.import/esqueleto.vox-1df0ddd6205d8212df677361a5d1b3b0.mesh"
+
+[deps]
+
+source_file="res://AssetsVox/esqueleto.vox"
+dest_files=[ "res://.import/esqueleto.vox-1df0ddd6205d8212df677361a5d1b3b0.mesh" ]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false
